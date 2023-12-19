@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <H1>Latest News</H1>
+    <script>
+        // Reload the page every 1 minute (60,000 milliseconds)
+        setInterval(function() {
+            location.reload();
+        }, 60000);
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><h2>The Mint Shorts!!</h2></a>
+</nav>
+
+<div class="container mt-5">
+    <div class="row">
+        {% for review in reviews %}
+        <div class="col-md-4 mb-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ review['Article_Title'] }}</h5>
+                    <p class="card-text">{{ review['Updated Time'] }}</p>
+                    <a href="{{ url_for('article', index=loop.index0) }}" class="btn btn-primary">Read Article</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

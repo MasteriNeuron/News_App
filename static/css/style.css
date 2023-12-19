@@ -1,0 +1,65 @@
+/* style.css */
+
+body {
+    font-family: 'Serif', sans-serif;
+    background:  #ea1b7c ;/* Black background for the navigation bar */
+    color: #001f3f; /* Red text color for the navigation bar */
+}
+
+.bg-nav {
+    font-family: 'Serif', sans-serif;
+    background: #360033;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.container-news {
+    background-color: #964807; /* Light gray background for the news container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.card.custom-card {
+    border: none; /* Remove card borders */
+    border-radius: 10px; /* Add border radius to cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow to cards */
+}
+
+.card.custom-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger box shadow on hover */
+}
+
+/* Add footer styles */
+.footer {
+    background-color: #000; /* Black background for the footer */
+    color: #ff0000; /* Red text color for the footer */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Add navigation bar styles */
+.navbar {
+    background: #000; /* Black background for the navigation bar */
+}
+
+.navbar a {
+    color: #ff0000 !important; /* Red text color for navigation bar links */
+}
+
+.navbar a:hover {
+    color: #8606ee !important; /* White text color on hover for navigation bar links */
+}

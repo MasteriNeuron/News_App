@@ -1,0 +1,18 @@
+<!-- update.html -->
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- Update the content container with the new data -->
+    <div id="content-container">
+        {% for article in reviews %}
+            <h1>{{ article['Article_Title'] }}</h1>
+            <p class="article-meta">Updated Time: {{ article['Updated Time'] }}</p>
+            <a href="{{ article['Article_href'] }}" target="_blank" class="btn btn-primary">Read Full Article</a>
+
+            <h2 class="mt-4">Article Content</h2>
+            {% for paragraph in article['Article Content'] %}
+                <p>{{ paragraph }}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endblock %}
