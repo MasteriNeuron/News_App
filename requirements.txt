@@ -16,5 +16,6 @@ soupsieve==1.9.5
 Werkzeug==0.16.0
 requests
 pymongo[srv]
-dotenv
+python-dotenv==0.21.0
+python-multipart==0.0.6
 IPython
