@@ -28,7 +28,8 @@ def register():
 #you can use this too
 
 import sys
-sys.path.append('../..')
+sys.path.append('/etc/secrets/')
+
 
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) # read local .env file
