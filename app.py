@@ -39,7 +39,8 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 
 # Connect to MongoDB
-client = MongoClient('mongodb+srv://master:!!master@atlascluster.w0iwrbk.mongodb.net/?retryWrites=true&w=majority')
+Mangodb_url=os.getenv('Mongodb_URL')
+client = MongoClient(Mangodb_url)
 db = client['client_database']  # Replace 'client_database' with your database name
 collection = db['users']  # Replace 'users' with your collection name
 
